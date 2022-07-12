@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Spinner WheelVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SpinnerWheelVC" customModule="SpinTheWheel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="border" translatesAutoresizingMaskIntoConstraints="NO" id="95a-b3-Szu">
+                                <rect key="frame" x="22.5" y="263.5" width="369" height="369"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wheel" translatesAutoresizingMaskIntoConstraints="NO" id="RWc-CH-lu9" customClass="SpinnerImgView" customModule="SpinTheWheel" customModuleProvider="target">
+                                <rect key="frame" x="41.5" y="283" width="331" height="330"/>
+                            </imageView>
+                            <button contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdG-z0-Wpw">
+                                <rect key="frame" x="155" y="395" width="104" height="106"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="start"/>
+                                <connections>
+                                    <action selector="spinButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i53-nS-Qf7"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="indicator" translatesAutoresizingMaskIntoConstraints="NO" id="rKC-g0-cFY">
+                                <rect key="frame" x="182" y="220" width="50" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="AwP-ZQ-fEV"/>
+                                    <constraint firstAttribute="width" constant="50" id="Fgy-qk-5cw"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spin the Wheel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrp-Oj-fKv">
+                                <rect key="frame" x="64" y="108" width="286" height="44.5"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="35"/>
+                                <color key="textColor" red="0.1536500885" green="0.36904052939999998" blue="0.71237768310000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RWc-CH-lu9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Ee-tD-mDA"/>
+                            <constraint firstItem="95a-b3-Szu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3t9-pa-PJ8"/>
+                            <constraint firstItem="rKC-g0-cFY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6io-oQ-6Jl"/>
+                            <constraint firstItem="sdG-z0-Wpw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Md-z3-ql6"/>
+                            <constraint firstItem="sdG-z0-Wpw" firstAttribute="top" secondItem="rKC-g0-cFY" secondAttribute="bottom" constant="75" id="LEf-WB-qYL"/>
+                            <constraint firstItem="lrp-Oj-fKv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="Pgy-dK-Nvg"/>
+                            <constraint firstItem="lrp-Oj-fKv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SCZ-me-3pT"/>
+                            <constraint firstItem="sdG-z0-Wpw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eHn-YT-EyW"/>
+                            <constraint firstItem="RWc-CH-lu9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ewD-uR-fBm"/>
+                            <constraint firstItem="95a-b3-Szu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nOT-gG-Pkf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="spinnerImgView" destination="RWc-CH-lu9" id="MZg-4m-W3l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="82.366071428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="border" width="369" height="369"/>
+        <image name="indicator" width="35" height="50"/>
+        <image name="start" width="104" height="106"/>
+        <image name="wheel" width="331" height="330"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
